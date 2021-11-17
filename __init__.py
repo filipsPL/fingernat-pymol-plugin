@@ -83,9 +83,9 @@ def make_dialog():
 
         currentDir = os.path.dirname(__file__)
 
-        cmd.load(currentDir + "/_sample_data--ligands.sdf", "ligands")
-        cmd.load(currentDir + "/_sample_data--rna.pdb", "RNA")
-        parseFile(currentDir + "/_sample_data--DETAILED-sample-data.tsv", configFromForm)
+        cmd.load(currentDir + "/sample_data/ligands.sdf", "ligands")
+        cmd.load(currentDir + "/sample_data/rna.pdb", "RNA")
+        parseFile(currentDir + "/sample_data/DETAIL_FULL.tsv", configFromForm, form)
         cmd.orient("RNA")
 
     # callback for the "proceed/run" button
