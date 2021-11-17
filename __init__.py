@@ -57,6 +57,7 @@ def make_dialog():
     dialog = QtWidgets.QDialog()
 
     # populate the Window from our *.ui file which was created with the Qt Designer
+    # launch with: designer
     uifile = os.path.join(os.path.dirname(__file__), 'fingerwidget.ui')
     form = loadUi(uifile, dialog)
 
@@ -102,7 +103,7 @@ def make_dialog():
     # callback for the "Browse" button
     def browse_filename():
         filename = QtWidgets.QFileDialog.getOpenFileName(
-            dialog, 'Open DETAIL file', filter='TSV files (*.tsv *.csv *.tab *.txt)')[0]
+            dialog, 'Open DETAIL file', filter='fingeRNAt TSV files (DETAIL_*.tsv);;TSV files (*.tsv *.csv);;Text files (*.txt);;All files (*)')[0]
         if filename:
             form.input_filename.setText(filename)
 
