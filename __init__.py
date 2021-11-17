@@ -2,7 +2,7 @@
 pymol plugin for displaying data from fingernat analysis
 generate output file first using option -detail
 
-plugin by Filip Stefaniak, fstefaniak@genesilico.pl
+plugin by Filip Stefaniak, fstefaniak@iimcb.gov.pl
 
 please note: this code is Python3!
 
@@ -144,6 +144,7 @@ def parseFile(file, configFromForm):
     interactionColors['Pi_Anion'] = "hotpink"
     interactionColors['Water-mediated'] = "blue"
     interactionColors['Ion-mediated'] = "salmon"
+    
 
     interactionDashWidth = {}
     interactionDashWidth['Pi_Stacking'] = 2
@@ -221,7 +222,7 @@ def parseFile(file, configFromForm):
     cmd.show_as("spheres", "neighbours and metals")
     cmd.orient("neighbours")
     cmd.show_as("nb_spheres", "resn HOH and neighbours")
-    
+
     # cmd.show("surface", "neighbours")
     # cmd.set("transparency", 0.9, "neighbours")
 
