@@ -67,7 +67,8 @@ def make_dialog():
         return [form.checkBox_ReceptorPreferences.isChecked(),
                         form.checkBox_LigandPreferences.isChecked(),
                         form.spinBox_transparency.value(),
-                        form.newObjectsPrefix.text()]
+                        form.newObjectsPrefix.text(),
+                        form.checkBox_neighbours.isChecked()]
 
     def deleteFNobjects():
         # remove fingernat created objects
