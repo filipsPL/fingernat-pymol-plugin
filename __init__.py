@@ -20,6 +20,7 @@ from __future__ import print_function
 import os
 from pymol.cgo import *
 
+
 def __init_plugin__(app=None):
     '''
     Add an entry to the PyMOL "Plugin" menu
@@ -144,7 +145,7 @@ def parseFile(file, configFromForm):
     interactionColors['Pi_Anion'] = "hotpink"
     interactionColors['Water-mediated'] = "blue"
     interactionColors['Ion-mediated'] = "salmon"
-    
+
 
     interactionDashWidth = {}
     interactionDashWidth['Pi_Stacking'] = 2
@@ -179,6 +180,21 @@ def parseFile(file, configFromForm):
     interactionDesc['Water-mediated'] = "Water-mediated"
     interactionDesc['Ion-mediated'] = "Ion-mediated"
     interactionDesc['Lipophilic'] = "Lipophilic"
+
+    #
+    # parameters for non-hardcoded interactions (from custom plugin):
+    #
+
+    # colors to use for new, not hardcoded interactions
+
+    interactionColorsOther = ['teal', 'limegreen', 'darksalmon', 'nitrogen', 'warmpink', 'lightpink', 'deepteal', 'raspberry', 'oxygen', 'deeppurple', 'skyblue', 'carbon', 'purpleblue', 'olive', 'lightteal', 'smudge', 'chocolate', 'greencyan', 'deepblue', 'lightmagenta', 'magenta', 'palecyan', 'hydrogen', 'palegreen', 'tv_blue', 'tv_green', 'pink', 'gray', 'ruby', 'chartreuse', 'sulfur', 'yellow', 'splitpea', 'limon', 'deepolive', 'paleyellow', 'dash', 'white', 'wheat', 'density', 'sand', 'violet', 'forest', 'yelloworange', 'lightblue', 'firebrick', 'lightorange', 'violetpurple', 'tv_orange', 'tv_red', 'lime', 'slate', 'deepsalmon', 'deepsalmon', 'grey', 'cyan', 'brightorange', 'tv_yellow', 'dirtyviolet', 'brown', ]
+
+
+    interactionDashWidthOther = 0.5
+    interactionDashGapOther = 0.03
+
+
+    #
 
     neighboursSelector = "((br. all within 2 of pseudo1) or (br. all within 2 of pseudo2)) and (polymer.nucleic or metals or resn HOH)"
 
@@ -237,6 +253,24 @@ def parseFile(file, configFromForm):
     increaseSphereFactor = 0.2 # increase the radius of spheres by adding this value
     multipleSphereFactor = 1.5 # multiple the radius of spheres by this value
 
+    # assign parameters for non-hardcoded interactions
+    for Interaction in interactionsDetected:
+        # if this is NOT a hard-coded interaction, we will pick a new color and add it to the global dictionary
+        # but which one to pick?
+        if Interaction not in interactionColors:
+
+            # assign colors
+            interactionColors[Interaction] = interactionColorsOther[0]
+            del interactionColorsOther[0] # remove this element from the main list.
+
+            # assing other parameters
+            interactionDashWidth[Interaction] = interactionDashWidthOther
+            interactionDashGap[Interaction] = interactionDashGapOther
+
+            # assign names
+            interactionDesc[Interaction] = Interaction
+
+
     ### Draw interaction preferences ----- RECEPTOR -------
     if checkBox_ReceptorPreferences:
 
@@ -248,6 +282,7 @@ def parseFile(file, configFromForm):
 
         points = {}
         for Interaction in interactionsDetected:
+
             kolor = cmd.get_color_tuple(cmd.get_color_index(interactionColors[Interaction]))
             points[Interaction] = [ COLOR, kolor[0],  kolor[1], kolor[2] ]
 
