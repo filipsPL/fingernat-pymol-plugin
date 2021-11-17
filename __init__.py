@@ -197,6 +197,7 @@ def parseFile(file, configFromForm, form):
 
     #
 
+    # is this line slow? check on the large structures - checkbox: checkBox_neighbours
     neighboursSelector = "((br. all within 2 of pseudo1) or (br. all within 2 of pseudo2)) and (polymer.nucleic or metals or resn HOH)"
 
     sampleFileName = file

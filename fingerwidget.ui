@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>467</width>
-    <height>524</height>
+    <height>558</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,8 +76,8 @@
         <rect>
          <x>10</x>
          <y>180</y>
-         <width>421</width>
-         <height>248</height>
+         <width>425</width>
+         <height>275</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
@@ -142,7 +142,7 @@
           </property>
          </widget>
         </item>
-        <item row="7" column="2">
+        <item row="8" column="2">
          <widget class="QPushButton" name="button_remove">
           <property name="font">
            <font>
@@ -164,7 +164,7 @@
           </property>
          </widget>
         </item>
-        <item row="6" column="1">
+        <item row="7" column="1">
          <widget class="QLabel" name="label_9">
           <property name="text">
            <string>transparency of objects</string>
@@ -173,6 +173,19 @@
            <number>2</number>
           </property>
          </widget>
+        </item>
+        <item row="11" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item row="3" column="1">
          <widget class="QLabel" name="label_7">
@@ -187,7 +200,7 @@
           </property>
          </widget>
         </item>
-        <item row="8" column="1">
+        <item row="10" column="1">
          <widget class="QLabel" name="label_15">
           <property name="text">
            <string/>
@@ -197,7 +210,7 @@
           </property>
          </widget>
         </item>
-        <item row="8" column="2">
+        <item row="10" column="2">
          <widget class="QProgressBar" name="progressBar">
           <property name="value">
            <number>0</number>
@@ -220,7 +233,7 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="2">
+        <item row="6" column="2">
          <widget class="QLineEdit" name="newObjectsPrefix">
           <property name="toolTip">
            <string extracomment="All new objects will have this prefix in their names"/>
@@ -246,7 +259,7 @@
           </property>
          </spacer>
         </item>
-        <item row="7" column="1">
+        <item row="8" column="1">
          <widget class="QLabel" name="label_13">
           <property name="text">
            <string>remove all fingeRNAt objects</string>
@@ -256,7 +269,7 @@
           </property>
          </widget>
         </item>
-        <item row="6" column="2">
+        <item row="7" column="2">
          <widget class="QSpinBox" name="spinBox_transparency">
           <property name="accelerated">
            <bool>true</bool>
@@ -269,7 +282,7 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="1">
+        <item row="6" column="1">
          <widget class="QLabel" name="label_14">
           <property name="text">
            <string>use this prefix for new objects</string>
@@ -279,18 +292,34 @@
           </property>
          </widget>
         </item>
-        <item row="9" column="1">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
+        <item row="5" column="2">
+         <widget class="QCheckBox" name="checkBox_neighbours">
+          <property name="enabled">
+           <bool>true</bool>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
+          <property name="toolTip">
+           <string extracomment="create an object with interacting residues"/>
           </property>
-         </spacer>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_10">
+          <property name="toolTip">
+           <string extracomment="create an object with interacting residues"/>
+          </property>
+          <property name="text">
+           <string>create object with interacting res.</string>
+          </property>
+          <property name="margin">
+           <number>2</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -298,7 +327,7 @@
        <property name="geometry">
         <rect>
          <x>240</x>
-         <y>440</y>
+         <y>470</y>
          <width>191</width>
          <height>31</height>
         </rect>
