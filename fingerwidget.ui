@@ -309,46 +309,6 @@
       <zorder>layoutWidget</zorder>
       <zorder>label_3</zorder>
      </widget>
-     <widget class="QWidget" name="tab_2">
-      <attribute name="title">
-       <string>Legend</string>
-      </attribute>
-      <widget class="QLabel" name="label_5">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>90</y>
-         <width>401</width>
-         <height>251</height>
-        </rect>
-       </property>
-       <property name="autoFillBackground">
-        <bool>true</bool>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-       <property name="pixmap">
-        <pixmap>legenda.png</pixmap>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_10">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>401</width>
-         <height>61</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Interactions are depicted using the following color scheme. The legend is also attached as the last object. To display it in the window, scroll to the last state.</string>
-       </property>
-       <property name="wordWrap">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
        <string>About</string>
