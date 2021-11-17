@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>491</width>
-    <height>476</height>
+    <width>467</width>
+    <height>524</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,28 +76,18 @@
         <rect>
          <x>10</x>
          <y>180</y>
-         <width>441</width>
-         <height>204</height>
+         <width>421</width>
+         <height>248</height>
         </rect>
        </property>
        <layout class="QGridLayout" name="gridLayout">
-        <item row="1" column="0">
-         <widget class="QLabel" name="label_4">
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_8">
           <property name="text">
-           <string/>
+           <string>create pocket preferences objects</string>
           </property>
-         </widget>
-        </item>
-        <item row="6" column="2">
-         <widget class="QSpinBox" name="spinBox_transparency">
-          <property name="accelerated">
-           <bool>true</bool>
-          </property>
-          <property name="suffix">
-           <string>%</string>
-          </property>
-          <property name="value">
-           <number>30</number>
+          <property name="margin">
+           <number>2</number>
           </property>
          </widget>
         </item>
@@ -105,23 +95,6 @@
          <widget class="QPushButton" name="button_browse">
           <property name="text">
            <string notr="true">Browse...</string>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="1">
-         <widget class="QLabel" name="label_13">
-          <property name="text">
-           <string>remove all fingeRNAt objects</string>
-          </property>
-          <property name="margin">
-           <number>2</number>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="input_filename">
-          <property name="text">
-           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -135,6 +108,13 @@
           </property>
          </widget>
         </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label_6">
           <property name="text">
@@ -145,16 +125,20 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="1">
-         <widget class="QLabel" name="label_7">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="input_filename">
           <property name="text">
-           <string>create receptor preferences objects</string>
+           <string notr="true"/>
           </property>
-          <property name="wordWrap">
-           <bool>false</bool>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QCheckBox" name="checkBox_LigandPreferences">
+          <property name="text">
+           <string/>
           </property>
-          <property name="margin">
-           <number>2</number>
+          <property name="checked">
+           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -180,46 +164,49 @@
           </property>
          </widget>
         </item>
-        <item row="5" column="2">
-         <widget class="QLineEdit" name="newObjectsPrefix">
-          <property name="toolTip">
-           <string extracomment="All new objects will have this prefix in their names"/>
-          </property>
+        <item row="6" column="1">
+         <widget class="QLabel" name="label_9">
           <property name="text">
-           <string/>
+           <string>transparency of objects</string>
           </property>
-          <property name="clearButtonEnabled">
+          <property name="margin">
+           <number>2</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>create receptor preferences objects</string>
+          </property>
+          <property name="wordWrap">
            <bool>false</bool>
           </property>
+          <property name="margin">
+           <number>2</number>
+          </property>
          </widget>
         </item>
-        <item row="4" column="2">
-         <widget class="QCheckBox" name="checkBox_LigandPreferences">
+        <item row="8" column="1">
+         <widget class="QLabel" name="label_15">
           <property name="text">
            <string/>
           </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="1">
-         <widget class="QLabel" name="label_14">
-          <property name="text">
-           <string>use this prefix for new objects</string>
-          </property>
           <property name="margin">
            <number>2</number>
           </property>
          </widget>
         </item>
-        <item row="4" column="1">
-         <widget class="QLabel" name="label_8">
-          <property name="text">
-           <string>create pocket preferences objects</string>
+        <item row="8" column="2">
+         <widget class="QProgressBar" name="progressBar">
+          <property name="value">
+           <number>0</number>
           </property>
-          <property name="margin">
-           <number>2</number>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+          <property name="invertedAppearance">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -233,13 +220,16 @@
           </property>
          </widget>
         </item>
-        <item row="6" column="1">
-         <widget class="QLabel" name="label_9">
-          <property name="text">
-           <string>transparency of objects</string>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="newObjectsPrefix">
+          <property name="toolTip">
+           <string extracomment="All new objects will have this prefix in their names"/>
           </property>
-          <property name="margin">
-           <number>2</number>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -256,7 +246,40 @@
           </property>
          </spacer>
         </item>
-        <item row="8" column="1">
+        <item row="7" column="1">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>remove all fingeRNAt objects</string>
+          </property>
+          <property name="margin">
+           <number>2</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2">
+         <widget class="QSpinBox" name="spinBox_transparency">
+          <property name="accelerated">
+           <bool>true</bool>
+          </property>
+          <property name="suffix">
+           <string>%</string>
+          </property>
+          <property name="value">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="label_14">
+          <property name="text">
+           <string>use this prefix for new objects</string>
+          </property>
+          <property name="margin">
+           <number>2</number>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
          <spacer name="verticalSpacer">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
@@ -274,13 +297,20 @@
       <widget class="QWidget" name="layoutWidget">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>390</y>
-         <width>441</width>
+         <x>240</x>
+         <y>440</y>
+         <width>191</width>
          <height>31</height>
         </rect>
        </property>
        <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="button_close">
+          <property name="text">
+           <string notr="true">Quit</string>
+          </property>
+         </widget>
+        </item>
         <item>
          <widget class="QPushButton" name="button_proceed">
           <property name="font">
@@ -291,13 +321,6 @@
           </property>
           <property name="text">
            <string notr="true">Proceed!</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="button_close">
-          <property name="text">
-           <string notr="true">Quit</string>
           </property>
          </widget>
         </item>

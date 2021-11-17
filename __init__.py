@@ -96,7 +96,7 @@ def make_dialog():
         configFromForm = readFormCheckBoxesValues(form)
 
         if filename:
-            parseFile(filename, configFromForm)
+            parseFile(filename, configFromForm, form)
         else:
             print('Please select or enter the filename')
 
@@ -117,7 +117,7 @@ def make_dialog():
 
     return dialog
 
-def parseFile(file, configFromForm):
+def parseFile(file, configFromForm, form):
 
     import pandas as pd
     from collections import OrderedDict
@@ -204,11 +204,18 @@ def parseFile(file, configFromForm):
     interactionData = pd.read_csv(sampleFileName, delimiter="\t")
 
     interactionDataGrouped = interactionData.groupby(['Ligand_name', 'Ligand_pose'])
+    interactionDataGroupedLen = len(interactionDataGrouped)
 
+
+    form.progressBar.setTextVisible(True)
+    form.label_15.setText("Loading structures...")
+
+    state = 0
     for i, (name, group) in enumerate(interactionDataGrouped):
         # ligandPoseName="^".join( [str(x) for x in name ] )
         # print(ligandPoseName)
         state = i+1
+        form.progressBar.setValue( int(state/interactionDataGroupedLen*100) )
 
         # group.sort_values(by=['Ligand_pose'], inplace=True)
 
@@ -275,6 +282,9 @@ def parseFile(file, configFromForm):
     ### Draw interaction preferences ----- RECEPTOR -------
     if checkBox_ReceptorPreferences:
 
+        form.label_15.setText("Calculating receptor prefs ...")
+
+
         interactionData['receptor_center'] = interactionData["Receptor_X"].astype(str) + '_' + interactionData["Receptor_Y"].astype(str) + '_' + interactionData["Receptor_Z"].astype(str)
 
         interactionDataGrouped = interactionData.groupby(['Interaction', 'receptor_center']).agg(['count'])['Ligand_name'].reset_index()
@@ -287,8 +297,12 @@ def parseFile(file, configFromForm):
             kolor = cmd.get_color_tuple(cmd.get_color_index(interactionColors[Interaction]))
             points[Interaction] = [ COLOR, kolor[0],  kolor[1], kolor[2] ]
 
-
+        rowNumber = 0
         for row in interactionDataGrouped.iterrows():
+
+            rowNumber = i+1
+            form.progressBar.setValue( int(rowNumber/interactionDataGroupedLen*100) )
+
 
             Interaction, receptor_center, count, percentage = row[1]
             #receptor_centerXYZ = receptor_center.split("_")
@@ -307,6 +321,9 @@ def parseFile(file, configFromForm):
     ### Draw interaction preferences ----- LIGANDS -------
 
     if checkBox_LigandPreferences:
+
+        form.label_15.setText("Calculating ligand prefs ...")
+
         roundLigandPositionsDigits = 2 # group positions of ligand centers by rounding positions to this number of decimal digits;
 
         interactionData['ligand_center'] = round(interactionData["Ligand_X"], roundLigandPositionsDigits).astype(str) + '_' \
@@ -322,8 +339,11 @@ def parseFile(file, configFromForm):
             kolor = cmd.get_color_tuple(cmd.get_color_index(interactionColors[Interaction]))
             points[Interaction] = [ COLOR, kolor[0],  kolor[1], kolor[2] ]
 
-
+        rowNumber = 0
         for row in interactionDataGrouped.iterrows():
+
+            rowNumber = i+1
+            form.progressBar.setValue( int(rowNumber/interactionDataGroupedLen*100) )
 
             Interaction, ligand_center, count, percentage = row[1]
             #receptor_centerXYZ = receptor_center.split("_")
@@ -344,6 +364,9 @@ def parseFile(file, configFromForm):
 
     # --------- colors legend ---------
     print("---------- Colors legend: -----------")
+
+    form.label_15.setText("Generating label object ...")
+
     for i, Interaction in enumerate(interactionColors):
 
         # legend as a next state
@@ -402,3 +425,4 @@ def parseFile(file, configFromForm):
 
     # final orientation of the scene
     cmd.orient("neighbours")
+    form.label_15.setText("Done!")
