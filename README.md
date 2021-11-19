@@ -15,7 +15,10 @@ fingernat-pymol-plugin
 
 ![logo_fingernat](logo_fingernat160.png)
 
-This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](https://github.com/n-szulc/fingeRNAt/). Works with PyMOL 2.x.
+This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](https://github.com/n-szulc/fingeRNAt/). Works with PyMOL 2.x and python 3.
+
+<!-- markdown-link-check-disable-next-line -->
+[![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml)
 
 # Installation
 
