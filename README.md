@@ -19,6 +19,7 @@ This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](htt
 
 # Installation
 
+<!-- markdown-link-check-disable-next-line -->
 In PyMOL window go to top menu - Plugin manager - Install new plugin - paste *https://github.com/filipsPL/fingernat-pymol-plugin* in the URL field, click "Fetch":
 
 ![](obrazki/README-3b91eee4.png)
@@ -84,5 +85,7 @@ Additionally, the color codes are printed in the console:
 
 # Contributors
 
-Filip Stefaniak, @filipsPL ![](https://img.shields.io/badge/fstefaniak-%40iimcb.gov.pl-brightgreen)
-Natalia Szulc, @n-szulc ![](https://img.shields.io/badge/nszulc-%40iimcb.gov.pl-brightgreen)
+| :octocat:       | github    | contact                                                                  |
+| --------------- | --------- | ------------------------------------------------------------------------ |
+| Filip Stefaniak | @filipsPL | ![](https://img.shields.io/badge/fstefaniak-%40iimcb.gov.pl-brightgreen) |
+| Natalia Szulc   | @n-szulc  | ![](https://img.shields.io/badge/nszulc-%40iimcb.gov.pl-brightgreen)     |
