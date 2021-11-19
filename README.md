@@ -88,7 +88,7 @@ Additionally, the color codes are printed in the console:
 
 # Contributors
 
-| :octocat:       | github    | contact                                                                  |
-| --------------- | --------- | ------------------------------------------------------------------------ |
+| :octocat:       | github                                   | contact                                                                  |
+| --------------- | ---------------------------------------- | ------------------------------------------------------------------------ |
 | Filip Stefaniak | [@filipsPL](https://github.com/filipsPL) | ![](https://img.shields.io/badge/fstefaniak-%40iimcb.gov.pl-brightgreen) |
-| Natalia Szulc   | [@n-szulc](https://github.com/n-szulc)  | ![](https://img.shields.io/badge/nszulc-%40iimcb.gov.pl-brightgreen)     |
+| Natalia Szulc   | [@n-szulc](https://github.com/n-szulc)   | ![](https://img.shields.io/badge/nszulc-%40iimcb.gov.pl-brightgreen)     |
