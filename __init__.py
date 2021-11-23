@@ -72,11 +72,14 @@ def make_dialog():
 
     def deleteFNobjects():
         # remove fingernat created objects
+        print("Removing all fingeRNAt objects...")
         cmd.delete("*Interactions")
         cmd.delete("*ReceptorPreferences")
         cmd.delete("*LigandPreferences")
         cmd.delete("*Legends")
         cmd.delete("*fingernat")
+        cmd.delete("neighbours")
+        cmd.delete("%neighbours")
 
     def loadSampleFile():
         # checkboxes
