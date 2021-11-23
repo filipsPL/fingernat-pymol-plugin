@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>467</width>
-    <height>558</height>
+    <width>469</width>
+    <height>568</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -157,7 +157,7 @@
            <string>Remove all objects created by this plugin</string>
           </property>
           <property name="text">
-           <string>Remove now!</string>
+           <string>✖ Remove</string>
           </property>
           <property name="flat">
            <bool>false</bool>
@@ -336,7 +336,7 @@
         <item>
          <widget class="QPushButton" name="button_close">
           <property name="text">
-           <string notr="true">Quit</string>
+           <string notr="true">✖ Quit</string>
           </property>
          </widget>
         </item>
@@ -349,7 +349,7 @@
            </font>
           </property>
           <property name="text">
-           <string notr="true">Proceed!</string>
+           <string notr="true">▶ Proceed!</string>
           </property>
          </widget>
         </item>
