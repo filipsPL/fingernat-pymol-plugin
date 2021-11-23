@@ -240,6 +240,16 @@ def parseFile(file, configFromForm, form):
             cmd.delete("pseudo1")
             cmd.delete("pseudo2")
 
+            # points in places where the interaction starts/ends
+            # we are skipping it at it will require creating 2x number_of_interactions of new objects
+            # kolor = cmd.get_color_tuple(cmd.get_color_index(interactionColors[Interaction]))
+            # pointLig = [ COLOR, kolor[0],  kolor[1], kolor[2], SPHERE, Ligand_X, Ligand_Y, Ligand_Z, 1]
+            # pointRec = [ COLOR, kolor[0],  kolor[1], kolor[2], SPHERE, Receptor_X, Receptor_Y, Receptor_Z, 1]
+            # cmd.load_cgo(pointLig, "test", state=0)
+            # cmd.set('cgo_transparency',2,"test", state=0)
+
+
+
     # find unique interactions
     interactionsDetected = interactionData.Interaction.unique()
 
