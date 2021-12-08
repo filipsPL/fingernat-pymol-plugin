@@ -15,7 +15,9 @@ fingernat-pymol-plugin
 
 ![logo_fingernat](logo_fingernat160.png)
 
-This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](https://github.com/n-szulc/fingeRNAt/). Works with PyMOL 2.x and Python 3.
+This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](https://github.com/n-szulc/fingeRNAt/). This means that you need to run it first and generate data to be visualized within this plugin. But don't worry, this is quite simple :)
+
+This plugin works with PyMOL 2.x and Python 3.
 
 <!-- markdown-link-check-disable-next-line -->
 [![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml)
@@ -84,7 +86,7 @@ Additionally, the color codes are printed in the console:
 | ![](obrazki/README-e95e087b.png) | Ligand preferences in the ligand binding site                                 |
 | ![](obrazki/README-2765c99c.png) | Preferred positions of Pi-involving interactions and cation anion-interactions |
 | ![](obrazki/README-1945eb54.png) | As above, but for the receptor                                                 |
-| ![](obrazki/README-e481bf7b.png) | User defined interactions; some bonds are heading to implicit hydrogens        | 
+| ![](obrazki/README-e481bf7b.png) | User defined interactions; some bonds are heading to implicit hydrogens        |
 
 
 # Contributors
