@@ -121,7 +121,14 @@ def make_dialog():
 
     return dialog
 
+def loguj(string):
+    print("[info]", string)
+
+
+
 def parseFile(file, configFromForm, form):
+
+    loguj("loading modules")
 
     import pandas as pd
     from collections import OrderedDict
@@ -136,9 +143,11 @@ def parseFile(file, configFromForm, form):
     newObjectsPrefix = configFromForm[3].strip()
 
     if(newObjectsPrefix != ''):
-        print("jest niepusty")
+        loguj("newObjectsPrefix is non-empty")
     else:
-        print("pusty")
+        loguj("newObjectsPrefix is empty")
+
+    loguj("defining interactions look and feel")
 
     interactionColors = OrderedDict()
     interactionColors['HB'] = "marine"
@@ -199,13 +208,14 @@ def parseFile(file, configFromForm, form):
     interactionDashGapOther = 0.03
 
 
-    #
+    loguj("selecting neighbours")
 
     # is this line slow? check on the large structures - checkbox: checkBox_neighbours
     neighboursSelector = "((br. all within 2 of pseudo1) or (br. all within 2 of pseudo2)) and (polymer.nucleic or metals or resn HOH)"
 
     sampleFileName = file
 
+    loguj("reading file")
     interactionData = pd.read_csv(sampleFileName, delimiter="\t")
 
     interactionDataGrouped = interactionData.groupby(['Ligand_name', 'Ligand_pose'])
@@ -216,6 +226,7 @@ def parseFile(file, configFromForm, form):
     form.label_15.setText("Loading structures...")
 
     state = 0
+    loguj("iterating interactionDataGrouped")
     for i, (name, group) in enumerate(interactionDataGrouped):
         # ligandPoseName="^".join( [str(x) for x in name ] )
         # print(ligandPoseName)
@@ -251,6 +262,7 @@ def parseFile(file, configFromForm, form):
 
 
     # find unique interactions
+    loguj("finding unique interactions")
     interactionsDetected = interactionData.Interaction.unique()
 
     cmd.group("Interactions", action="open")
@@ -276,6 +288,7 @@ def parseFile(file, configFromForm, form):
     increaseSphereFactor = 0.2 # increase the radius of spheres by adding this value
     multipleSphereFactor = 1.5 # multiple the radius of spheres by this value
 
+    loguj("iterating interactionsDetected")
     # assign parameters for non-hardcoded interactions
     for Interaction in interactionsDetected:
         # if this is NOT a hard-coded interaction, we will pick a new color and add it to the global dictionary
@@ -297,6 +310,7 @@ def parseFile(file, configFromForm, form):
     ### Draw interaction preferences ----- RECEPTOR -------
     if checkBox_ReceptorPreferences:
 
+        loguj("calculating receptor preferences")
         form.label_15.setText("Calculating receptor prefs ...")
 
 
@@ -335,7 +349,10 @@ def parseFile(file, configFromForm, form):
 
     ### Draw interaction preferences ----- LIGANDS -------
 
+
     if checkBox_LigandPreferences:
+
+        loguj("calculating ligand preferences")
 
         form.label_15.setText("Calculating ligand prefs ...")
 
@@ -378,6 +395,7 @@ def parseFile(file, configFromForm, form):
 
 
     # --------- colors legend ---------
+    loguj("composing the color legend")
     print("---------- Colors legend: -----------")
 
     form.label_15.setText("Generating label object ...")
@@ -388,6 +406,7 @@ def parseFile(file, configFromForm, form):
 
         pointName = "Legends.inter_%s" % (Interaction)
         distName = "Legends.inter__%s" % (Interaction)
+
 
         cmd.pseudoatom(pointName, pos=[Ligand_X+5, Ligand_Y+0+(1*i), Ligand_Z+0], state=noOfPoses+1)
         cmd.pseudoatom("skasuj", pos=[Ligand_X+0, Ligand_Y+0+(1*i), Ligand_Z+0], state=noOfPoses+1)
@@ -406,8 +425,11 @@ def parseFile(file, configFromForm, form):
         kolor = cmd.get_color_tuple(cmd.get_color_index(interactionColors[Interaction]))
         point = [ COLOR, kolor[0],  kolor[1], kolor[2] ]
         point.extend([ SPHERE, Ligand_X+0, Ligand_Y+0+(1*i), Ligand_Z+0, 0.5])
-        cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction), state=noOfPoses+1)
-        cmd.set('cgo_transparency',cgo_transparency,"Legends.prefs_%s" % (Interaction), state=noOfPoses+1)
+
+        cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction))
+        # cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction), state=noOfPoses+1) # this breaks pymol 2.5.0
+
+        cmd.set('cgo_transparency',cgo_transparency,"Legends.prefs_%s" % (Interaction))
 
         # coloring of all interactions detected
         if Interaction in interactionsDetected:
@@ -441,3 +463,4 @@ def parseFile(file, configFromForm, form):
     # final orientation of the scene
     cmd.orient("neighbours")
     form.label_15.setText("Done!")
+    loguj("done!")
