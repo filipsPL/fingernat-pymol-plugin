@@ -4,6 +4,9 @@ fingernat-pymol-plugin
 <!-- TOC START min:1 max:6 link:true asterisk:false update:true -->
 - [About](#about)
 - [Installation](#installation)
+  - [Prerequisities](#prerequisities)
+  - [Plugin installation in pymol](#plugin-installation-in-pymol)
+- [Compatibility and tests](#compatibility-and-tests)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
 - [Contributors](#contributors)
@@ -17,21 +20,55 @@ fingernat-pymol-plugin
 
 This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](https://github.com/n-szulc/fingeRNAt/). This means that you need to run it first and generate data to be visualized in this plugin. But don't worry, it's quite simple :)
 
-This plugin works with PyMOL 2.x and Python 3.
+This plugin works best with PyMOL >= 2.2.3 and Python 3.
 
-<!-- markdown-link-check-disable-next-line -->
 [![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml)
 
 # Installation
 
-<!-- markdown-link-check-disable-next-line -->
-In PyMOL window go to top menu - Plugin manager - Install new plugin - paste *https://github.com/filipsPL/fingernat-pymol-plugin* in the URL field, click `Fetch`:
+## Prerequisities
+
+The plugin works under the python 3 and makes use of the pandas module. To install it:
+
+```bash
+# using pip
+python3 -m pip install pandas
+
+# or conda
+conda install pandas
+
+# or in debian/ubuntu using apt:
+apt install python3-pandas
+
+# or install the full conda environment of pymol and pandas, ready to install this plugin
+conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-open-source
+```
+
+## Plugin installation in pymol
+
+In PyMOL window go to top menu - Plugin manager - Install new plugin
 
 ![](obrazki/README-3b91eee4.png)
 
 The fingeRNAt plugin will be available from the Plugin menu:
 
 ![](obrazki/README-ded6536c.png)
+
+
+# Compatibility and tests
+
+this pymol plugin was tested in the following setups:
+
+| system | PyMOL version | test               |
+| ------ | ------------- | ------------------ |
+| Linux  | 2.0.7         | ❎ not supported   |
+| Linux  | 2.1.1         | 🔶 partial support |
+| Linux  | 2.2.3         | ✅                 |
+| Linux  | 2.3.2         | ✅                 |
+| Linux  | 2.4.0         | ✅                 |
+| Linux  | 2.5.0         | ✅                 |
+| Linux  | 2.6.0a        | ✅                 |
+
 
 
 # Usage
