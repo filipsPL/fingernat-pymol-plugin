@@ -47,8 +47,11 @@ conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-o
 ## Plugin installation in pymol
 
 1. In PyMOL window go to top menu - Plugin manager - Install new plugin
-1. In the URL paste the link to the latest code archive: `https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/heads/main.zip`
-   - ... or alternatively, copy and paste the link to the zip archive in the [latest release](https://github.com/filipsPL/fingernat-pymol-plugin/releases/latest) page.
+1. In the URL paste the link to one of the following:
+  - the latest release: <!-- RELEASE_START -->`https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/tags/0-2.zip`<!-- RELEASE_END -->,
+  - or the latest code archive: `https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/heads/main.zip`
+
+
 
 ![](obrazki/README-ff4621f4.png)
 
@@ -64,7 +67,7 @@ click fetch, confirm the installation and the path.
 This pymol plugin was tested in the following setups:
 
 | PyMOL version | Linux | MacOS | Windows |
-| ------------- |:-----:| ----- | ------- |
+| ------------- |:-----:|:-----:|:-------:|
 | 2.2.3         |  ✅   |       |         |
 | 2.3.2         |  ✅   |       |         |
 | 2.4.0         |  ✅   |       |         |
