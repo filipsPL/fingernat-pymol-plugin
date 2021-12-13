@@ -28,7 +28,7 @@ This plugin works best with PyMOL >= 2.2.3 and Python 3.
 
 ## Prerequisities
 
-The plugin works under the python 3 and makes use of the pandas module. To install it:
+The plugin works under the Python 3 and makes use of the pandas module. To install it:
 
 ```bash
 # using pip
@@ -46,8 +46,8 @@ conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-o
 
 ## Plugin installation in pymol
 
-1. In PyMOL window go to top menu - Plugin manager - Install new plugin
-1. In the URL paste the link to one of the following:
+1. In PyMOL window go to top menu - Plugin -> Plugin manager -> Install new plugin
+1. In the URL field paste one of the following links:
   - the latest release: <!-- RELEASE_START -->`https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/tags/0-4.zip`<!-- RELEASE_END -->,
   - or the latest code archive: `https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/heads/main.zip`
 
@@ -55,9 +55,9 @@ conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-o
 
 ![](obrazki/README-ff4621f4.png)
 
-click fetch, confirm the installation and the path.
+click `Fetch`, confirm the installation and the path.
 
-3. The fingeRNAt plugin is available in the Plugin menu:
+3. The fingeRNAt plugin is available from the Plugin menu:
 
 ![](obrazki/README-ded6536c.png)
 
@@ -70,7 +70,7 @@ This pymol plugin was tested in the following setups:
 | ------------- |:-----:|:-----:|:-------:|
 | 2.2.3         |  ✅   |       |         |
 | 2.3.2         |  ✅   |       |         |
-| 2.4.0         |  ✅   |       |         |
+| 2.4.0         |  ✅   |   ✅  |         |
 | 2.5.0         |  ✅   |       |         |
 | 2.6.0a        |  ✅   |       |         |
 
