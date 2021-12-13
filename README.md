@@ -44,7 +44,7 @@ apt install python3-pandas
 conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-open-source
 ```
 
-## Plugin installation in pymol
+## Plugin installation in PyMOL
 
 1. In PyMOL window go to top menu - Plugin -> Plugin manager -> Install new plugin
 1. In the URL field paste one of the following links:
@@ -64,7 +64,7 @@ click `Fetch`, confirm the installation and the path.
 
 # Compatibility and tests
 
-This pymol plugin was tested in the following setups:
+This PyMOL plugin was tested in the following setups:
 
 | PyMOL version | Linux | MacOS | Windows |
 | ------------- |:-----:|:-----:|:-------:|
