@@ -4,6 +4,9 @@ generate output file first using option -detail
 
 plugin by Filip Stefaniak, fstefaniak@iimcb.gov.pl
 
+Installation and manual at:
+https://github.com/filipsPL/fingernat-pymol-plugin
+
 please note: this code is Python3!
 
 # may be necesary to install pandas:
@@ -128,6 +131,7 @@ def loguj(string):
 
 def parseFile(file, configFromForm, form):
 
+
     loguj("loading modules")
 
     import pandas as pd
@@ -135,6 +139,14 @@ def parseFile(file, configFromForm, form):
     from pymol import cmd
 
     cmd.set("group_auto_mode", 2) #Treats dots in object names as group prefix delimiter. 0: off, 1: put in existing groups, 2: create groups if they do not exist
+
+    # required for some workarounds:
+    pymolversion = cmd.get_version()[0]
+    pymolversionMain = ".".join(pymolversion.split(".")[:2]) # 2.5
+
+    loguj("pymol version full: " + str(pymolversion))
+    loguj("pymol version main: " + str(pymolversionMain))
+
 
     # assing values from the form data
     checkBox_ReceptorPreferences = configFromForm[0]
@@ -426,21 +438,29 @@ def parseFile(file, configFromForm, form):
         point = [ COLOR, kolor[0],  kolor[1], kolor[2] ]
         point.extend([ SPHERE, Ligand_X+0, Ligand_Y+0+(1*i), Ligand_Z+0, 0.5])
 
-        cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction))
-        # cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction), state=noOfPoses+1) # this breaks pymol 2.5.0
+        if pymolversionMain == '2.5':
+            # workaround for crashing on the following line:
+            cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction))
+        else:
+            cmd.load_cgo(point, "Legends.prefs_%s" % (Interaction), state=noOfPoses+1) # this breaks pymol 2.5.0
 
         cmd.set('cgo_transparency',cgo_transparency,"Legends.prefs_%s" % (Interaction))
 
         # coloring of all interactions detected
         if Interaction in interactionsDetected:
-            cmd.set('dash_gap', interactionDashGap[Interaction], "Interactions.Inter--%s" % (Interaction), state=0)
-            cmd.set('dash_length', 0.3, "Interactions.Inter--%s" % (Interaction), state=0)
-            cmd.set('dash_width', interactionDashWidth[Interaction], "Interactions.Inter--%s" % (Interaction), state=0)
+            cmd.set('dash_gap', interactionDashGap[Interaction], "Interactions.Inter--%s" % (Interaction), state=noOfPoses+1)
+            cmd.set('dash_length', 0.3, "Interactions.Inter--%s" % (Interaction), state=noOfPoses+1)
+            cmd.set('dash_width', interactionDashWidth[Interaction], "Interactions.Inter--%s" % (Interaction), state=noOfPoses+1)
             cmd.color(interactionColors[Interaction], "Interactions.Inter--%s" % (Interaction))
 
         print("  %s (%s) is presented in %s" % (interactionDesc[Interaction], Interaction, interactionColors[Interaction]) )
-
     print("The color legend is displayed as the last state (go to the last state to see)")
+
+    if pymolversionMain == '2.5':
+        # to hide artifacts
+        cmd.disable("Legends") # hide the legend
+
+
     # cmd.group("%s--Legends" % (newObjectsPrefix), members="legend*", action='auto')
 
 
