@@ -5,7 +5,7 @@ fingernat-pymol-plugin
 - [About](#about)
 - [Installation](#installation)
   - [Prerequisities](#prerequisities)
-  - [Plugin installation in pymol](#plugin-installation-in-pymol)
+  - [Plugin installation in PyMOL](#plugin-installation-in-pymol)
 - [Compatibility and tests](#compatibility-and-tests)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
