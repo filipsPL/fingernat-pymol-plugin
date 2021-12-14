@@ -102,7 +102,7 @@ Each group and object can be hidden/shown separately.
 ![](obrazki/README-777f64f7.png)
 
 
-Additionally, the color codes are printed in the console:
+Additionally, the color codes are printed in the console.
 
 ```
 ---------- Colors legend: -----------
@@ -117,6 +117,8 @@ Additionally, the color codes are printed in the console:
   Ion-mediated (Ion-mediated) is presented in salmon
   any_contact (any_contact) is presented in teal
 ```
+
+The exact number of interactions depends on the input data.
 
 # Screenshots
 
