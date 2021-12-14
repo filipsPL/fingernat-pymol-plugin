@@ -32,6 +32,9 @@
          <height>80</height>
         </rect>
        </property>
+       <property name="toolTip">
+        <string>the nice logo of the fingeRNAt program</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -83,6 +86,9 @@
        <layout class="QGridLayout" name="gridLayout">
         <item row="4" column="1">
          <widget class="QLabel" name="label_8">
+          <property name="toolTip">
+           <string>Create new objects showing the preferences of the binding pocket to accomodate interactions of a given type.</string>
+          </property>
           <property name="text">
            <string>create pocket preferences objects</string>
           </property>
@@ -93,6 +99,9 @@
         </item>
         <item row="0" column="2">
          <widget class="QPushButton" name="button_browse">
+          <property name="toolTip">
+           <string>Browse for the output of fingeRNAt</string>
+          </property>
           <property name="text">
            <string notr="true">Browse...</string>
           </property>
@@ -127,6 +136,9 @@
         </item>
         <item row="0" column="1">
          <widget class="QLineEdit" name="input_filename">
+          <property name="toolTip">
+           <string>The path to the file will be shown here.</string>
+          </property>
           <property name="text">
            <string notr="true"/>
           </property>
@@ -166,6 +178,9 @@
         </item>
         <item row="7" column="1">
          <widget class="QLabel" name="label_9">
+          <property name="toolTip">
+           <string>Make the objects transparent (again) with a given transparency</string>
+          </property>
           <property name="text">
            <string>transparency of objects</string>
           </property>
@@ -189,6 +204,9 @@
         </item>
         <item row="3" column="1">
          <widget class="QLabel" name="label_7">
+          <property name="toolTip">
+           <string>Create new objects showing the preferences of the receptor to accomodate interactions of a given type.</string>
+          </property>
           <property name="text">
            <string>create receptor preferences objects</string>
           </property>
@@ -212,6 +230,9 @@
         </item>
         <item row="10" column="2">
          <widget class="QProgressBar" name="progressBar">
+          <property name="toolTip">
+           <string>The progress bar will appear here.</string>
+          </property>
           <property name="value">
            <number>0</number>
           </property>
@@ -261,6 +282,9 @@
         </item>
         <item row="8" column="1">
          <widget class="QLabel" name="label_13">
+          <property name="toolTip">
+           <string>Remove all objects created with this plugin. Use with care!</string>
+          </property>
           <property name="text">
            <string>remove all fingeRNAt objects</string>
           </property>
@@ -284,6 +308,9 @@
         </item>
         <item row="6" column="1">
          <widget class="QLabel" name="label_14">
+          <property name="toolTip">
+           <string>Append the prefix to the new objects. May be helpful if the plugin is run multiple times for various data.</string>
+          </property>
           <property name="text">
            <string>use this prefix for new objects</string>
           </property>
@@ -311,7 +338,7 @@
         <item row="5" column="1">
          <widget class="QLabel" name="label_10">
           <property name="toolTip">
-           <string extracomment="create an object with interacting residues"/>
+           <string extracomment="create an object with interacting residues">Create a separate object only with interacting residues. May increase the clarity of presentation.</string>
           </property>
           <property name="text">
            <string>create object with interacting res.</string>
