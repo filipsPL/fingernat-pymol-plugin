@@ -2,6 +2,7 @@ fingernat-pymol-plugin
 ============
 
 <!-- TOC START min:1 max:6 link:true asterisk:false update:true -->
+- [fingernat-pymol-plugin](#fingernat-pymol-plugin)
 - [About](#about)
 - [Installation](#installation)
   - [Prerequisities](#prerequisities)
@@ -22,7 +23,12 @@ This PyMOL plugin visualizes interactions detected by the [fingeRNAt progam](htt
 
 This plugin works best with PyMOL >= 2.2.3 and Python 3.
 
-[![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml)
+[![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml) [![DOI](https://zenodo.org/badge/429062363.svg)](https://zenodo.org/badge/latestdoi/429062363)
+
+
+To cite: Szulc, N. A., Mackiewicz, Z., Bujnicki, J. M., & Stefaniak, F. (2022). fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions. PLOS Computational Biology, 18(6), e1009783. https://doi.org/10.1371/journal.pcbi.1009783
+
+This repo DOI: 10.5281/zenodo.7341533.
 
 # Installation
 
