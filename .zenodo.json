@@ -42,11 +42,6 @@
       "identifier": "10.1371/journal.pcbi.1009783",
       "relation": "isSupplementTo",
       "resource_type": "publication-article"
-    },
-    {
-      "scheme": "doi",
-      "identifier": "10.5281/zenodo.7341532",
-      "relation": "isVersionOf"
     }
   ]
 }
