@@ -26,9 +26,9 @@ This plugin works best with PyMOL >= 2.2.3 and Python 3.
 [![Check Markdown links](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml/badge.svg)](https://github.com/filipsPL/fingernat-pymol-plugin/actions/workflows/action-links.yml) [![DOI](https://zenodo.org/badge/429062363.svg)](https://zenodo.org/badge/latestdoi/429062363)
 
 
-To cite: Szulc, N. A., Mackiewicz, Z., Bujnicki, J. M., & Stefaniak, F. (2022). fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions. PLOS Computational Biology, 18(6), e1009783. https://doi.org/10.1371/journal.pcbi.1009783
+**To cite:** Szulc, N. A., Mackiewicz, Z., Bujnicki, J. M., & Stefaniak, F. (2022). fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions. PLOS Computational Biology, 18(6), e1009783. https://doi.org/10.1371/journal.pcbi.1009783
 
-This repo DOI: 10.5281/zenodo.7341533.
+This repo DOI: [![DOI](https://zenodo.org/badge/429062363.svg)](https://zenodo.org/badge/latestdoi/429062363)
 
 # Installation
 
@@ -54,7 +54,7 @@ conda create -y --name pymol-pandas -c conda-forge  python">=3.5" pandas pymol-o
 
 1. In PyMOL window go to top menu - Plugin -> Plugin manager -> Install new plugin
 1. In the URL field paste one of the following links:
-  - the latest release: <!-- RELEASE_START -->`https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/tags/0-4.zip`<!-- RELEASE_END -->,
+  - the latest release: <!-- RELEASE_START -->`https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/tags/0-4-2-8.zip`<!-- RELEASE_END -->,
   - or the latest code archive: `https://github.com/filipsPL/fingernat-pymol-plugin/archive/refs/heads/main.zip`
 
 
