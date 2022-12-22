@@ -8,25 +8,25 @@ title: >-
 message: pymol plugin for fingeRNAt
 type: software
 authors:
-  - given-names: 'Natalia A. Szulc '
+  - given-names: "Natalia A. Szulc "
     email: nszulc@iimcb.gov.pl
     affiliation: >-
       International Institute of Molecular and Cell
       Biology in Warsaw, Warsaw, Poland
-    orcid: 'https://orcid.org/0000-0002-2991-3634'
+    orcid: "https://orcid.org/0000-0002-2991-3634"
   - given-names: Zuzanna Mackiewicz
     email: zmackiewicz@iimcb.gov.pl
     affiliation: >-
       International Institute of Molecular and Cell
       Biology in Warsaw, Warsaw, Poland
-    orcid: 'https://orcid.org/0000-0003-1654-9025'
-  - orcid: 'https://orcid.org/0000-0002-6633-165X'
+    orcid: "https://orcid.org/0000-0003-1654-9025"
+  - orcid: "https://orcid.org/0000-0002-6633-165X"
     given-names: Janusz M. Bujnicki
     email: janusz@iimcb.gov.pl
     affiliation: >-
       International Institute of Molecular and Cell
       Biology in Warsaw, Warsaw, Poland
-  - orcid: 'https://orcid.org/0000-0001-5758-9416'
+  - orcid: "https://orcid.org/0000-0001-5758-9416"
     given-names: Filip Stefaniak
     affiliation: >-
       International Institute of Molecular and Cell
@@ -34,15 +34,15 @@ authors:
     email: fstefaniak@iimcb.gov.pl
 identifiers:
   - type: doi
-    value: ''
+    value: ""
   - type: doi
     value: 10.1371/journal.pcbi.1009783
   - type: url
     value: >-
       https://github.com/filipsPL/fingernat-pymol-plugin
     description: GitHub repository
-repository-code: 'https://github.com/filipsPL/fingernat-pymol-plugin'
-url: 'https://github.com/n-szulc/fingeRNAt/'
+repository-code: "https://github.com/filipsPL/fingernat-pymol-plugin"
+url: "https://github.com/n-szulc/fingeRNAt/"
 abstract: >-
   Computational methods play a pivotal role in drug
   discovery and are widely applied in virtual
