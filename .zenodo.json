@@ -1,11 +1,11 @@
 {
-    "description": "fingeRNAt pymol plugin</p>", 
+    "description": "fingeRNAt pymol plugin<br />", 
     "license": "Apache-2.0",
     "title": "fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions: pymol plugin", 
-    "version": "0-4-2-2", 
+    "version": "0-4-2", 
     "upload_type": "software", 
     "publication_date": "2022-11-21", 
-    "notes": "grant id: 2020/39/B/NZ2/03127",
+    "notes": "This work was supported by the National Science Centre in Poland (grant number 2020/39/B/NZ2/03127 to F.S.)",
     "keywords": ["interaction fingerprints", "SIFts", "RNA", "small molecules", "non-covalent bonds"],
     "creators": [
         {
