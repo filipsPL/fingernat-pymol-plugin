@@ -34,13 +34,14 @@ authors:
     email: fstefaniak@iimcb.gov.pl
 identifiers:
   - type: doi
-    value: ""
-  - type: doi
     value: 10.1371/journal.pcbi.1009783
   - type: url
     value: >-
       https://github.com/filipsPL/fingernat-pymol-plugin
     description: GitHub repository
+  - type: doi
+    value: 10.5281/zenodo.7341533
+    description: Zenodo github repository
 repository-code: "https://github.com/filipsPL/fingernat-pymol-plugin"
 url: "https://github.com/n-szulc/fingeRNAt/"
 abstract: >-
