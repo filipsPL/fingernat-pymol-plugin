@@ -2,7 +2,7 @@
     "description": "fingeRNAt pymol plugin</p>", 
     "license": "Apache-2.0",
     "title": "fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions: pymol plugin", 
-    "version": "0-4-2", 
+    "version": "0-4-2-2", 
     "upload_type": "software", 
     "publication_date": "2022-11-21", 
     "grants": [{"id":"2020/39/B/NZ2/03127"}],
@@ -20,5 +20,5 @@
         }
 
     ], 
-    "access_right": "open", 
+    "access_right": "open"
 }
