@@ -1,0 +1,36 @@
+{
+    "description": "fingeRNAt pymol plugin</p>", 
+    "license": "other-open", 
+    "title": "filipsPL/fingernat-pymol-plugin", 
+    "version": "0-4-2", 
+    "upload_type": "software", 
+    "publication_date": "2022-11-21", 
+    "grants": [{"id":"2020/39/B/NZ2/03127"}],
+    "keywords": ["interaction fingerprints", "SIFts", "RNA", "small molecules", "non-covalent bonds"],
+    "creators": [
+        {
+            "affiliation": "International Institute of Molecular and Cell Biology in Warsaw", 
+            "name": "Filip Stefaniak",
+            "orcid": "0000-0001-5758-9416"
+        }, 
+        {
+            "affiliation": "International Institute of Molecular and Cell Biology in Warsaw", 
+            "name": "Natalia A. Szulc",
+            "orcid": "0000-0002-2991-3634"
+        }
+
+    ], 
+    "access_right": "open", 
+    "related_identifiers": [
+        {
+            "scheme": "url", 
+            "identifier": "https://github.com/filipsPL/fingernat-pymol-plugin/tree/0-4-2", 
+            "relation": "isSupplementTo"
+        }, 
+        {
+            "scheme": "doi", 
+            "identifier": "10.5281/zenodo.7341532", 
+            "relation": "isVersionOf"
+        }
+    ]
+}

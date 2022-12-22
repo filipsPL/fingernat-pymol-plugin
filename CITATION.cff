@@ -1,0 +1,101 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  fingeRNAt—A novel tool for high-throughput analysis
+  of nucleic acid-ligand interactions: pymol plugin
+message: pymol plugin for fingeRNAt
+type: software
+authors:
+  - given-names: 'Natalia A. Szulc '
+    email: nszulc@iimcb.gov.pl
+    affiliation: >-
+      International Institute of Molecular and Cell
+      Biology in Warsaw, Warsaw, Poland
+    orcid: 'https://orcid.org/0000-0002-2991-3634'
+  - given-names: Zuzanna Mackiewicz
+    email: zmackiewicz@iimcb.gov.pl
+    affiliation: >-
+      International Institute of Molecular and Cell
+      Biology in Warsaw, Warsaw, Poland
+    orcid: 'https://orcid.org/0000-0003-1654-9025'
+  - orcid: 'https://orcid.org/0000-0002-6633-165X'
+    given-names: Janusz M. Bujnicki
+    email: janusz@iimcb.gov.pl
+    affiliation: >-
+      International Institute of Molecular and Cell
+      Biology in Warsaw, Warsaw, Poland
+  - orcid: 'https://orcid.org/0000-0001-5758-9416'
+    given-names: Filip Stefaniak
+    affiliation: >-
+      International Institute of Molecular and Cell
+      Biology in Warsaw, Warsaw, Poland
+    email: fstefaniak@iimcb.gov.pl
+identifiers:
+  - type: doi
+    value: ''
+  - type: doi
+    value: 10.1371/journal.pcbi.1009783
+  - type: url
+    value: >-
+      https://github.com/filipsPL/fingernat-pymol-plugin
+    description: GitHub repository
+repository-code: 'https://github.com/filipsPL/fingernat-pymol-plugin'
+url: 'https://github.com/n-szulc/fingeRNAt/'
+abstract: >-
+  Computational methods play a pivotal role in drug
+  discovery and are widely applied in virtual
+  screening, structure optimization, and compound
+  activity profiling. Over the last decades, almost
+  all the attention in medicinal chemistry has been
+  directed to protein-ligand binding, and
+  computational tools have been created with this
+  target in mind. With novel discoveries of
+  functional RNAs and their possible applications,
+  RNAs have gained considerable attention as
+  potential drug targets. However, the availability
+  of bioinformatics tools for nucleic acids is
+  limited. Here, we introduce fingeRNAt—a software
+  tool for detecting non-covalent interactions formed
+  in complexes of nucleic acids with ligands. The
+  program detects nine types of interactions: (i)
+  hydrogen and (ii) halogen bonds, (iii)
+  cation-anion, (iv) pi-cation, (v) pi-anion, (vi)
+  pi-stacking, (vii) inorganic ion-mediated, (viii)
+  water-mediated, and (ix) lipophilic interactions.
+  However, the scope of detected interactions can be
+  easily expanded using a simple plugin system. In
+  addition, detected interactions can be visualized
+  using the associated PyMOL plugin, which
+  facilitates the analysis of medium-throughput
+  molecular complexes. Interactions are also encoded
+  and stored as a bioinformatics-friendly Structural
+  Interaction Fingerprint (SIFt)—a binary string
+  where the respective bit in the fingerprint is set
+  to 1 if a particular interaction is present and to
+  0 otherwise. This output format, in turn, enables
+  high-throughput analysis of interaction data using
+  data analysis techniques. We present applications
+  of fingeRNAt-generated interaction fingerprints for
+  visual and computational analysis of RNA-ligand
+  complexes, including analysis of interactions
+  formed in experimentally determined RNA-small
+  molecule ligand complexes deposited in the Protein
+  Data Bank. We propose interaction fingerprint-based
+  similarity as an alternative measure to RMSD to
+  recapitulate complexes with similar interactions
+  but different folding. We present an application of
+  interaction fingerprints for the clustering of
+  molecular complexes. This approach can be used to
+  group ligands that form similar binding networks
+  and thus have similar biological properties. The
+  fingeRNAt software is freely available at
+  https://github.com/n-szulc/fingeRNAt.
+keywords:
+  - rna
+  - small molecules
+  - non-covalent interactions
+  - interaction fingerprint
+  - python
+license: Apache-2.0
