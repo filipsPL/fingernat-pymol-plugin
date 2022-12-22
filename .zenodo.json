@@ -1,24 +1,52 @@
 {
-    "description": "fingeRNAt pymol plugin<br />", 
-    "license": "Apache-2.0",
-    "title": "fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions: pymol plugin", 
-    "version": "0-4-2", 
-    "upload_type": "software", 
-    "publication_date": "2022-11-21", 
-    "notes": "This work was supported by the National Science Centre in Poland (grant number 2020/39/B/NZ2/03127 to F.S.)",
-    "keywords": ["interaction fingerprints", "SIFts", "RNA", "small molecules", "non-covalent bonds"],
-    "creators": [
-        {
-            "affiliation": "International Institute of Molecular and Cell Biology in Warsaw", 
-            "name": "Filip Stefaniak",
-            "orcid": "0000-0001-5758-9416"
-        }, 
-        {
-            "affiliation": "International Institute of Molecular and Cell Biology in Warsaw", 
-            "name": "Natalia A. Szulc",
-            "orcid": "0000-0002-2991-3634"
-        }
-
-    ], 
-    "access_right": "open"
+  "description": "fingeRNAt pymol plugin<br />",
+  "license": "Apache-2.0",
+  "title": "fingeRNAt—A novel tool for high-throughput analysis of nucleic acid-ligand interactions: pymol plugin",
+  "version": "0-4-2",
+  "upload_type": "software",
+  "publication_date": "2022-11-21",
+  "notes": "This work was supported by the National Science Centre in Poland (grant number 2020/39/B/NZ2/03127 to F.S.)",
+  "keywords": [
+    "interaction fingerprints",
+    "SIFts",
+    "RNA",
+    "small molecules",
+    "non-covalent bonds"
+  ],
+  "creators": [
+    {
+      "affiliation": "International Institute of Molecular and Cell Biology in Warsaw",
+      "name": "Filip Stefaniak",
+      "orcid": "0000-0001-5758-9416"
+    },
+    {
+      "affiliation": "International Institute of Molecular and Cell Biology in Warsaw",
+      "name": "Natalia A. Szulc",
+      "orcid": "0000-0002-2991-3634"
+    }
+  ],
+  "access_right": "open",
+  "resource_type": {
+    "type": "software",
+    "title": "Software"
+  },
+  "related_identifiers": [
+    {
+      "scheme": "url",
+      "identifier": "https://github.com/filipsPL/fingernat-pymol-plugin/tree/0-4-2-5",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.1371/journal.pcbi.1009783",
+      "relation": "isSupplementTo",
+      "resource_type": "publication-article"
+    },
+    {
+      "scheme": "doi",
+      "identifier": "10.5281/zenodo.7341532",
+      "relation": "isVersionOf"
+    }
+  ]
 }
